@@ -153,16 +153,16 @@ export default function StaffManagement() {
                           : s.name?.slice(0, 2).toUpperCase() || '??'}
                       </div>
                       <div className="flex flex-col min-w-0">
-                        <span className="font-black text-slate-950 dark:text-white text-sm leading-tight truncate">
+                        <span className="font-bold text-slate-900 dark:text-white text-sm leading-tight truncate">
                           {s.name || 'Unknown Staff'}
                         </span>
-                        <span className="text-xs text-slate-600 dark:text-slate-400 font-medium truncate">
+                        <span className="text-xs text-slate-500 dark:text-slate-400 truncate">
                           {s.role}
                         </span>
                       </div>
                     </div>
                   </td>
-                  <td className="px-4 py-3 text-slate-700 dark:text-slate-300 font-medium">{s.department}</td>
+                  <td className="px-4 py-3 text-slate-600 dark:text-slate-300">{s.department}</td>
                   <td className="px-4 py-3">
                     <span className={`badge ${s.shift === 'Morning' ? 'badge-info' : s.shift === 'Night' ? 'badge-purple' : 'badge-success'}`}>{s.shift}</span>
                   </td>

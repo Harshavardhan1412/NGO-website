@@ -232,15 +232,15 @@ export default function ElderlyManagement() {
                     : r.name?.slice(0, 2).toUpperCase() || '??'}
                 </div>
                 <div>
-                  <h4 className="font-black text-slate-950 dark:text-white">{r.name}</h4>
-                  <p className="text-xs text-slate-600 dark:text-slate-400 font-medium">{r.gender} • {r.age} yrs • Room {r.room}</p>
+                  <h4 className="font-bold text-slate-900 dark:text-white">{r.name}</h4>
+                  <p className="text-xs text-slate-500">{r.gender} • {r.age} yrs • Room {r.room}</p>
                 </div>
               </div>
               <span className={`badge ${healthColors[r.health]}`}>{r.health}</span>
             </div>
             <div className="space-y-2 text-sm mb-4">
-              <div className="flex items-start gap-2 text-slate-700 dark:text-slate-300 font-medium">
-                <Heart className="w-4 h-4 text-red-500 mt-0.5 flex-shrink-0" />
+              <div className="flex items-start gap-2 text-slate-600 dark:text-slate-300">
+                <Heart className="w-4 h-4 text-red-400 mt-0.5 flex-shrink-0" />
                 <span className="text-xs">{r.condition}</span>
               </div>
               <div className="flex items-center gap-2 text-xs text-slate-500">
