@@ -1,5 +1,5 @@
 import { useState, useEffect } from 'react';
-import { Link, useLocation } from 'react-router-dom';
+import { Link, useLocation, useNavigate } from 'react-router-dom';
 import { Menu, X, Moon, Sun, Globe } from 'lucide-react';
 import { useTheme } from '../../context/ThemeContext';
 import { ngoInfo } from '../../data/mockData';
@@ -16,6 +16,8 @@ export default function Navbar() {
   const [scrolled, setScrolled] = useState(false);
   const [open, setOpen] = useState(false);
   const { dark, toggleTheme } = useTheme();
+  const location = useLocation();
+  const navigate = useNavigate();
 
   useEffect(() => {
     const onScroll = () => setScrolled(window.scrollY > 60);
@@ -25,6 +27,19 @@ export default function Navbar() {
 
   const scrollTo = (href) => {
     setOpen(false);
+    
+    // If not on home page, navigate to home page first
+    if (location.pathname !== '/') {
+      navigate(`/${href}`);
+      // Small delay to allow the home page to render before scrolling
+      setTimeout(() => {
+        const el = document.querySelector(href);
+        if (el) el.scrollIntoView({ behavior: 'smooth' });
+      }, 150);
+      return;
+    }
+
+    // Already on home page, just scroll
     const el = document.querySelector(href);
     if (el) el.scrollIntoView({ behavior: 'smooth' });
   };
