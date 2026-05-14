@@ -67,8 +67,8 @@ export default function Footer() {
           {/* Brand column */}
           <div>
             <div className="flex items-center gap-2 mb-6">
-              <div className="w-12 h-12 rounded-full overflow-hidden flex items-center justify-center shadow-lg bg-white">
-                <img src="/src/assets/logo.png" alt="PCDS Logo" className="w-full h-full object-contain" />
+              <div className="w-12 h-12 rounded-full overflow-hidden flex items-center justify-center shadow-lg bg-white flex-shrink-0">
+                <img src="/src/assets/logo.png" alt="PCDS Logo" className="w-10 h-10 object-contain" />
               </div>
               <span className="font-bold text-2xl tracking-tighter text-white">
                 {ngoInfo.name.toUpperCase()}

@@ -40,8 +40,8 @@ export default function Navbar() {
         <div className="flex items-center justify-between h-16 md:h-20">
           {/* Logo */}
           <div className="flex items-center gap-2">
-            <div className="w-12 h-12 rounded-full overflow-hidden flex items-center justify-center shadow-lg bg-white">
-              <img src="/src/assets/logo.png" alt="PCDS Logo" className="w-full h-full object-contain" />
+            <div className="w-12 h-12 rounded-full overflow-hidden flex items-center justify-center shadow-lg bg-white flex-shrink-0">
+              <img src="/src/assets/logo.png" alt="PCDS Logo" className="w-10 h-10 object-contain" />
             </div>
             <div>
               <span className="font-bold text-lg leading-tight tracking-tight text-slate-900 dark:text-white block">

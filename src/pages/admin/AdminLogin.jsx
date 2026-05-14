@@ -37,33 +37,36 @@ export default function AdminLogin() {
   return (
     <div className="min-h-screen flex" style={{ background: 'linear-gradient(135deg, #0F172A 0%, #1E3A8A 50%, #065F46 100%)' }}>
       {/* Left panel */}
-      <div className="hidden lg:flex flex-col justify-center px-16 w-1/2 relative overflow-hidden">
+      <div className="hidden lg:flex flex-col justify-center px-16 w-1/2 relative overflow-hidden bg-slate-900">
         <div className="absolute inset-0 pointer-events-none">
-          <div className="absolute top-1/4 left-1/4 w-72 h-72 rounded-full opacity-10 blur-3xl" style={{ background: 'radial-gradient(circle, #3B82F6, transparent)', animation: 'float 6s ease-in-out infinite' }} />
-          <div className="absolute bottom-1/4 right-1/4 w-56 h-56 rounded-full opacity-10 blur-3xl" style={{ background: 'radial-gradient(circle, #10B981, transparent)', animation: 'float 8s ease-in-out infinite reverse' }} />
+          <div className="absolute top-1/4 left-1/4 w-72 h-72 rounded-full bg-blue-600/10 blur-3xl animate-pulse" />
+          <div className="absolute bottom-1/4 right-1/4 w-56 h-56 rounded-full bg-emerald-600/10 blur-3xl animate-pulse" style={{ animationDirection: 'reverse' }} />
         </div>
         <div className="relative z-10 text-white">
-          <div className="flex items-center gap-3 mb-12">
-            <div className="w-16 h-16 rounded-full overflow-hidden bg-white flex items-center justify-center shadow-2xl">
-              <img src="/src/assets/logo.png" alt="PCDS Logo" className="w-full h-full object-contain" />
+          <div className="flex items-center gap-4 mb-12">
+            <div className="w-20 h-20 rounded-full overflow-hidden bg-white flex items-center justify-center shadow-2xl flex-shrink-0">
+              <img src="/src/assets/logo.png" alt="PCDS Logo" className="w-16 h-16 object-contain" />
             </div>
             <div>
-              <p className="font-black text-2xl leading-none">Prajwala Community Development Society</p>
-              <p className="text-blue-300 text-sm">Foundation Admin Portal</p>
+              <p className="font-black text-2xl leading-tight">Prajwalaa Community<br />Development Society</p>
+              <p className="text-blue-400 text-sm font-bold uppercase tracking-wider">Foundation Admin Portal</p>
             </div>
           </div>
-          <h1 className="text-4xl font-black mb-4 leading-tight">Manage with <br /><span style={{ background: 'linear-gradient(135deg, #34D399, #60A5FA)', WebkitBackgroundClip: 'text', WebkitTextFillColor: 'transparent', backgroundClip: 'text' }}>Care & Precision</span></h1>
+          <h1 className="text-4xl font-black mb-4 leading-tight">
+            Manage with <br />
+            <span className="text-emerald-400">Care & Precision</span>
+          </h1>
           <p className="text-white/70 text-lg leading-relaxed mb-10">Access the complete management dashboard to oversee elderly care, staff, medicines, rations, donations, and volunteer coordination.</p>
           <div className="grid grid-cols-2 gap-4">
             {[
-              { label: 'Residents Managed', value: residents.length },
-              { label: 'Staff Members', value: staff.length },
-              { label: 'Active Volunteers', value: volunteers.filter(v => v.status === 'Active').length },
+              { label: 'Residents Managed', value: residents?.length || 0 },
+              { label: 'Staff Members', value: staff?.length || 0 },
+              { label: 'Active Volunteers', value: volunteers?.filter(v => v.status === 'Active').length || 0 },
               { label: 'Daily Meals Served', value: '312+' },
             ].map(s => (
-              <div key={s.label} className="glass rounded-xl p-4">
-                <p className="text-2xl font-black text-white">{s.value}</p>
-                <p className="text-white/60 text-xs">{s.label}</p>
+              <div key={s.label} className="bg-white/5 backdrop-blur-md rounded-2xl p-5 border border-white/10">
+                <p className="text-3xl font-black text-white">{s.value}</p>
+                <p className="text-white/50 text-xs font-bold uppercase tracking-wide">{s.label}</p>
               </div>
             ))}
           </div>
