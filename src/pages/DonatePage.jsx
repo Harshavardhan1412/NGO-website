@@ -12,7 +12,6 @@ export default function DonatePage() {
     name: '',
     email: '',
     phone: '',
-    pan: '',
     amount: ''
   });
 
@@ -98,16 +97,7 @@ export default function DonatePage() {
                 </div>
 
                 <div className="grid grid-cols-1 md:grid-cols-2 gap-5">
-                  <div>
-                    <label className="block text-xs font-semibold text-slate-600 dark:text-slate-400 mb-1.5 uppercase">PAN Number (80G)</label>
-                    <div className="relative">
-                      <FileText className="absolute left-3 top-1/2 -translate-y-1/2 w-5 h-5 text-slate-400" />
-                      <input type="text" placeholder="For tax exemption" 
-                        value={formData.pan} onChange={e => setFormData({...formData, pan: e.target.value.toUpperCase()})}
-                        className="input-field pl-10 uppercase" />
-                    </div>
-                  </div>
-                  <div>
+                  <div className="md:col-span-2">
                     <label className="block text-xs font-semibold text-slate-600 dark:text-slate-400 mb-1.5 uppercase">Donation Amount (₹) *</label>
                     <div className="relative">
                       <span className="absolute left-4 top-1/2 -translate-y-1/2 font-bold text-slate-400">₹</span>
