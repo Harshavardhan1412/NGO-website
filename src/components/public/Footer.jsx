@@ -76,14 +76,6 @@ export default function Footer() {
             </div>
             <p className="text-slate-300 text-sm leading-relaxed mb-8">
               Empowering communities and transforming lives through education, healthcare, and sustainable development since 2010.
-            </p>
-            <div className="flex gap-3">
-              {socials.map((s, i) => (
-                <a key={i} href={s.href} className="w-10 h-10 rounded-full bg-white/5 border border-white/10 flex items-center justify-center hover:bg-white/20 transition-all">
-                  <s.icon className="w-5 h-5 text-white" />
-                </a>
-              ))}
-            </div>
           </div>
 
           {/* Quick Links */}
