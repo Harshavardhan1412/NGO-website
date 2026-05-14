@@ -76,6 +76,7 @@ export default function Footer() {
             </div>
             <p className="text-slate-300 text-sm leading-relaxed mb-8">
               Empowering communities and transforming lives through education, healthcare, and sustainable development since 2010.
+            </p>
           </div>
 
           {/* Quick Links */}
