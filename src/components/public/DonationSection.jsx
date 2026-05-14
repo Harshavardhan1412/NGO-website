@@ -52,6 +52,7 @@ export default function DonationSection() {
                   transform: inView ? (tier.featured ? 'scale(1.05)' : 'translateY(0)') : 'translateY(30px)',
                   transition: `all 0.6s ease ${i * 0.15}s`,
                 }}
+                onClick={() => window.location.href = '/donate'}
               >
                 {tier.featured && (
                   <div className="absolute -top-3 left-1/2 -translate-x-1/2 px-4 py-1 bg-gradient-to-r from-blue-600 to-blue-500 text-white text-xs font-bold rounded-full shadow-lg">
@@ -128,9 +129,9 @@ export default function DonationSection() {
                   className="input-field pl-8"
                 />
               </div>
-              <button className="btn-accent px-6 whitespace-nowrap">
+              <button onClick={() => window.location.href = '/donate'} className="btn-accent px-6 whitespace-nowrap">
                 <Lock className="w-4 h-4" />
-                Donate Securely
+                Donate Now
               </button>
             </div>
 
