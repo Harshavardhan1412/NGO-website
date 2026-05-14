@@ -7,7 +7,6 @@ import {
   Heart, BarChart3, Bell, LogOut, Menu, X, Moon, Sun,
   ChevronLeft, Settings, Shield, Home
 } from 'lucide-react';
-import { notifications } from '../data/mockData';
 import { Link } from 'react-router-dom';
 
 const navItems = [
@@ -139,17 +138,7 @@ export default function AdminLayout() {
             {dark ? <Sun className="w-5 h-5" /> : <Moon className="w-5 h-5" />}
           </button>
 
-          {/* Notifications bell */}
-          <NavLink to="/admin/notifications"
-            className="relative w-9 h-9 rounded-lg flex items-center justify-center text-slate-500 hover:bg-slate-100 dark:hover:bg-slate-700 transition-all"
-          >
-            <Bell className="w-5 h-5" />
-            {unread > 0 && (
-              <span className="absolute -top-0.5 -right-0.5 w-4 h-4 bg-red-500 text-white text-xs font-bold rounded-full flex items-center justify-center">
-                {unread}
-              </span>
-            )}
-          </NavLink>
+
 
           {/* User avatar */}
           <div className="flex items-center gap-2 pl-2 border-l border-slate-200 dark:border-slate-700">
