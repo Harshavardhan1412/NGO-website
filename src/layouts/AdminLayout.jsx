@@ -18,8 +18,9 @@ const navItems = [
   { label: 'Ration Supply', icon: Package, path: '/admin/rations' },
   { label: 'Donations', icon: DollarSign, path: '/admin/donations' },
   { label: 'Volunteers', icon: Heart, path: '/admin/volunteers' },
-  { label: 'Reports', icon: BarChart3, path: '/admin/reports' },
-  { label: 'Notifications', icon: Bell, path: '/admin/notifications' },
+  { label: 'Staff Attendance', icon: UserCheck, path: '/admin/attendance/staff' },
+  { label: 'Elderly Attendance', icon: Users, path: '/admin/attendance/elderly' },
+  { label: 'Attendance Reports', icon: BarChart3, path: '/admin/attendance/reports' },
 ];
 
 export default function AdminLayout() {
@@ -27,9 +28,9 @@ export default function AdminLayout() {
   const { dark, toggleTheme } = useTheme();
   const navigate = useNavigate();
   const [sidebarOpen, setSidebarOpen] = useState(true);
-  const [mobileOpen, setMobileOpen] = useState(false);
 
-  const unread = notifications.filter(n => !n.read).length;
+
+  const [mobileOpen, setMobileOpen] = useState(false);
 
   const handleLogout = () => {
     logout();
@@ -59,12 +60,6 @@ export default function AdminLayout() {
           >
             <item.icon className="w-5 h-5 flex-shrink-0" />
             {sidebarOpen && <span>{item.label}</span>}
-            {!sidebarOpen && item.label === 'Notifications' && unread > 0 && (
-              <span className="ml-auto w-2 h-2 rounded-full bg-red-500" />
-            )}
-            {sidebarOpen && item.label === 'Notifications' && unread > 0 && (
-              <span className="ml-auto px-1.5 py-0.5 bg-red-500 text-white text-xs rounded-full font-bold">{unread}</span>
-            )}
           </NavLink>
         ))}
       </nav>

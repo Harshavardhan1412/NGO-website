@@ -17,8 +17,9 @@ import MedicationManagement from './pages/admin/MedicationManagement';
 import RationManagement from './pages/admin/RationManagement';
 import DonationManagement from './pages/admin/DonationManagement';
 import VolunteerManagement from './pages/admin/VolunteerManagement';
-import ReportsAnalytics from './pages/admin/ReportsAnalytics';
-import NotificationsPage from './pages/admin/NotificationsPage';
+import StaffAttendance from './pages/admin/StaffAttendance';
+import ElderlyAttendance from './pages/admin/ElderlyAttendance';
+import AttendanceReports from './pages/admin/AttendanceReports';
 import DonatePage from './pages/DonatePage';
 
 export default function App() {
@@ -51,8 +52,9 @@ export default function App() {
                 <Route path="rations" element={<RationManagement />} />
                 <Route path="donations" element={<DonationManagement />} />
                 <Route path="volunteers" element={<VolunteerManagement />} />
-                <Route path="reports" element={<ReportsAnalytics />} />
-                <Route path="notifications" element={<NotificationsPage />} />
+                <Route path="attendance/staff" element={<StaffAttendance />} />
+                <Route path="attendance/elderly" element={<ElderlyAttendance />} />
+                <Route path="attendance/reports" element={<AttendanceReports />} />
               </Route>
 
               {/* Fallback */}

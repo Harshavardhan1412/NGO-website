@@ -173,13 +173,6 @@ export default function AdminLogin() {
                   ) : 'Sign In to Dashboard'}
                 </button>
 
-                <div className="pt-3 border-t border-slate-100 dark:border-slate-700">
-                  <p className="text-xs text-slate-400 text-center mb-2">Demo credentials:</p>
-                  <div className="grid grid-cols-2 gap-2 text-xs text-slate-500 bg-slate-50 dark:bg-slate-700/50 rounded-xl p-3">
-                    <div><span className="font-semibold">Email:</span> admin@ashakiran.org</div>
-                    <div><span className="font-semibold">Password:</span> admin123</div>
-                  </div>
-                </div>
               </form>
             )}
           </div>

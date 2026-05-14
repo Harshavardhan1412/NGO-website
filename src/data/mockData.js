@@ -291,3 +291,19 @@ export const notifications = [
   { id: 7, type: "info", title: "New Volunteer", message: "Aditya Kumar has completed orientation and is now active.", time: "1 day ago", read: true },
   { id: 8, type: "warning", title: "Dal Stock Low", message: "Toor Dal stock (85kg) is approaching reorder level (100kg).", time: "1 day ago", read: true },
 ];
+
+export const staffAttendanceData = [
+  { id: "SA001", staffId: "S001", date: new Date().toISOString().split('T')[0], status: "Present", checkIn: "08:00 AM", checkOut: "04:00 PM" },
+  { id: "SA002", staffId: "S002", date: new Date().toISOString().split('T')[0], status: "Present", checkIn: "07:30 AM", checkOut: "03:30 PM" },
+  { id: "SA003", staffId: "S003", date: new Date().toISOString().split('T')[0], status: "Present", checkIn: "09:00 AM", checkOut: "05:00 PM" },
+  { id: "SA004", staffId: "S004", date: new Date().toISOString().split('T')[0], status: "Leave", checkIn: "-", checkOut: "-" },
+  { id: "SA005", staffId: "S005", date: new Date().toISOString().split('T')[0], status: "Present", checkIn: "09:15 AM", checkOut: "05:15 PM" },
+];
+
+export const elderlyAttendanceData = [
+  { id: "EA001", residentId: "E001", date: new Date().toISOString().split('T')[0], status: "Present", notes: "Regular checkup done" },
+  { id: "EA002", residentId: "E002", date: new Date().toISOString().split('T')[0], status: "Present", notes: "Participated in yoga" },
+  { id: "EA003", residentId: "E003", date: new Date().toISOString().split('T')[0], status: "Hospitalized", notes: "Admitted to City Hospital for observation" },
+  { id: "EA004", residentId: "E004", date: new Date().toISOString().split('T')[0], status: "Present", notes: "" },
+  { id: "EA005", residentId: "E005", date: new Date().toISOString().split('T')[0], status: "Present", notes: "" },
+];
